@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>font libraries · casinelli</title>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --void: #080808;
+    --signal: #FF0080;
+    --bone: rgba(255,255,255,0.82);
+    --ghost: rgba(255,255,255,0.2);
+    --dim: rgba(255,255,255,0.08);
+    --border: rgba(255,0,128,0.15);
+  }
+  body {
+    background: var(--void);
+    font-family: 'Courier Prime', monospace;
+    color: var(--bone);
+    padding: 4rem 3rem 6rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header { margin-bottom: 4rem; }
+  h1 {
+    font-size: 0.58rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 0.4rem;
+  }
+  .sub {
+    font-size: 0.48rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.15);
+    font-style: italic;
+  }
+
+  .section { margin-bottom: 3.5rem; }
+  .section-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--signal);
+    opacity: 0.6;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.15s;
+  }
+  .entry:last-child { border-bottom: none; }
+  .entry:hover { background: rgba(255,0,128,0.03); margin: 0 -1rem; padding: 1rem; }
+
+  .entry-name {
+    font-size: 0.95rem;
+    color: var(--bone);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+  .entry-desc {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 60ch;
+  }
+  .entry-tag {
+    font-size: 0.44rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 0.25em 0.7em;
+    border: 1px solid var(--border);
+    color: rgba(255,0,128,0.5);
+    white-space: nowrap;
+    align-self: start;
+  }
+
+  a.visit {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--signal);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+  a.visit:hover { opacity: 1; }
+  a.visit::after { content: ' ↗'; }
+
+  .priority {
+    border-left: 2px solid rgba(255,0,128,0.4);
+    padding-left: 1rem;
+    margin-left: -1rem;
+  }
+  .priority .entry-name { color: #ffffff; }
+
+  .note {
+    margin-top: 3rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border);
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.8;
+    font-style: italic;
+  }
+  .note strong { color: var(--signal); font-style: normal; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>font libraries · casinelli brand project</h1>
+  <div class="sub">curated for xenographic archival register · bespoke · non-generic</div>
+</header>
+
+<div class="section">
+  <div class="section-label">Free · Open Source</div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Google Fonts</div>
+      <div class="entry-desc">Enormous library. Filter aggressively — the gems are buried. Best used for body/mono pairings rather than display. Avoid the top 20 most popular entirely.</div>
+      <a class="visit" href="https://fonts.google.com" target="_blank" rel="noopener">fonts.google.com</a>
+    </div>
+    <div class="entry-tag">free</div>
+  </div>
+
+  <div class="entry priority">
+    <div>
+      <div class="entry-name">Fontshare</div>
+      <div class="entry-desc">Curated by Indian Type Foundry. High quality, all free, dramatically less saturated than Google. Several genuinely strange and beautiful options. Start here.</div>
+      <a class="visit" href="https://www.fontshare.com" target="_blank" rel="noopener">fontshare.com</a>
+    </div>
+    <div class="entry-tag">free · priority</div>
+  </div>
+
+  <div class="entry priority">
+    <div>
+      <div class="entry-name">Velvetyne</div>
+      <div class="entry-desc">French experimental collective. Nothing here is safe or predictable. Genuinely weird, genuinely free. The correct register for this project. Look at everything.</div>
+      <a class="visit" href="https://velvetyne.fr" target="_blank" rel="noopener">velvetyne.fr</a>
+    </div>
+    <div class="entry-tag">free · priority</div>
+  </div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Use & Modify</div>
+      <div class="entry-desc">Open source fonts only, well curated and organized. Good for finding things you wouldn't encounter on Google. Strong on geometric and editorial cuts.</div>
+      <a class="visit" href="https://usemodify.com" target="_blank" rel="noopener">usemodify.com</a>
+    </div>
+    <div class="entry-tag">free · open source</div>
+  </div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Adobe Fonts</div>
+      <div class="entry-desc">Requires Creative Cloud. Extensive library including many foundry exclusives. Worth mining if you already have a subscription. Quality is consistently high.</div>
+      <a class="visit" href="https://fonts.adobe.com" target="_blank" rel="noopener">fonts.adobe.com</a>
+    </div>
+    <div class="entry-tag">free w/ cc</div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-label">Paid · Worth It</div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Typography.com — H&FJ</div>
+      <div class="entry-desc">Hoefler & Co. The serious industry standard. Expensive, meticulous, timeless. Gotham, Sentinel, Chronicle. Not experimental but irreproachably excellent.</div>
+      <a class="visit" href="https://www.typography.com" target="_blank" rel="noopener">typography.com</a>
+    </div>
+    <div class="entry-tag">paid · premium</div>
+  </div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Commercial Type</div>
+      <div class="entry-desc">Editorial. Distinctive. Used by major publications worldwide. Foundry for people who take type seriously. Strong historical sensibility fused with contemporary cuts.</div>
+      <a class="visit" href="https://commercialtype.com" target="_blank" rel="noopener">commercialtype.com</a>
+    </div>
+    <div class="entry-tag">paid · editorial</div>
+  </div>
+
+  <div class="entry priority">
+    <div>
+      <div class="entry-name">Klim Type Foundry</div>
+      <div class="entry-desc">New Zealand. Exceptional and genuinely unusual. Tiempos, Domaine, Founders Grotesk. Not trying to be trendy. The kind of type that ages into mythology. High priority for this project.</div>
+      <a class="visit" href="https://klim.co.nz" target="_blank" rel="noopener">klim.co.nz</a>
+    </div>
+    <div class="entry-tag">paid · priority</div>
+  </div>
+
+  <div class="entry priority">
+    <div>
+      <div class="entry-name">Dinamo — ABC Dinamo</div>
+      <div class="entry-desc">The exact register this project needs. Used by Björk collaborators, experimental publications, and institutions that take aesthetics seriously. Feels like it belongs to a different century without being costume-y. Start here for the xenographic archival feel.</div>
+      <a class="visit" href="https://abcdinamo.com" target="_blank" rel="noopener">abcdinamo.com</a>
+    </div>
+    <div class="entry-tag">paid · top priority</div>
+  </div>
+
+  <div class="entry">
+    <div>
+      <div class="entry-name">Swiss Typefaces</div>
+      <div class="entry-desc">Swiss precision with genuinely unexpected options. Suisse Int'l and its variants are widely used but the catalog has quieter gems. Clean, exacting, serious.</div>
+      <a class="visit" href="https://www.swisstypefaces.com" target="_blank" rel="noopener">swisstypefaces.com</a>
+    </div>
+    <div class="entry-tag">paid · swiss</div>
+  </div>
+
+  <div class="entry priority">
+    <div>
+      <div class="entry-name">Future Fonts</div>
+      <div class="entry-desc">Fonts in active development — cheaper because they're unfinished, genuinely experimental because the makers are still figuring them out. Best place to find something nobody else has yet. The discovery layer.</div>
+      <a class="visit" href="https://www.futurefonts.xyz" target="_blank" rel="noopener">futurefonts.xyz</a>
+    </div>
+    <div class="entry-tag">paid · experimental</div>
+  </div>
+
+</div>
+
+<div class="note">
+  <strong>For this project specifically:</strong> the xenographic archival register wants something that reads as ancient and alien simultaneously. Look for serifs with unusual stroke contrast, monospaced cuts with personality, or grotesques that feel slightly wrong in a way you can't immediately name. <strong>Dinamo</strong> and <strong>Velvetyne</strong> first. <strong>Klim</strong> and <strong>Future Fonts</strong> second. Avoid anything in the top results of any of these sites — the right font will be three pages in.
+</div>
+
+</body>
+</html>
