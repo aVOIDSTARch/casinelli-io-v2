@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>casinelli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="./src/css/styles.css" />
+<link rel="stylesheet" type="text/css" href="./src/css/panchang.css" />
+<link rel="stylesheet" type="text/css" href="./src/css/array.css" />
+<link rel="stylesheet" type="text/css" href="./src/css/boska.css" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="veil"></div>
+<div class="cursor-glow" id="glow"></div>
+<div class="scanline"></div>
+
+<div class="coord coord-tl">incarnation sequence · active</div>
+<div class="coord coord-br">signal detected · archive open · hecarrieswater.com</div>
+
+<div class="stage">
+  <div class="signal-block">
+    <div class="block-content">
+
+      <div class="words">
+        <span>catharsis</span>
+        <span>chrysalis</span>
+        <span>creation</span>
+      </div>
+
+      <div class="name">casinelli</div>
+
+      <div class="contact">
+        <div class="contact-label">transmission received</div>
+        <div class="contact-row">
+          <input type="email" placeholder="your coordinates" id="emailInput"/>
+          <button onclick="handleSubmit()">enter</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  const glow = document.getElementById('glow');
+  document.addEventListener('mousemove', e => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+
+  function handleSubmit() {
+    const input = document.getElementById('emailInput');
+    const val = input.value.trim();
+    if (!val || !val.includes('@')) return;
+    const row = input.closest('.contact-row');
+    row.innerHTML = '<span style="padding:0.5em 1em;font-family:\'Courier Prime\',monospace;font-size:0.68rem;letter-spacing:0.18em;color:rgba(255,0,128,0.75);font-style:italic;">signal logged.</span>';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleSubmit();
+  });
+</script>
+
+</body>
+</html>
